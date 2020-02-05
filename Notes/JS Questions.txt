@@ -1,0 +1,33 @@
+console.log(typeof typeof 42);
+
+The following function will print on console?function varTest() { var x = 31; if (true) { var x = 71; console.log(x); } console.log(x);}
+
+
+(function(){
+  function isEven(num) {
+    return num%2 = 0;
+  }
+  console.log(isEven('Sam'));
+})();
+
+
+How would you specify that a scope variable should have one-time binding only?
+
+a. @
+
+b. ::
+
+c. ;;
+
+d. !
+
+Which of the following statements are true regarding Javascript scopes?
+
+a. Javascript uses function level scopes.
+
+b. Javascript uses block scopes
+
+c. Variable declared in an outer function is accessible in an inner function.
+
+d. Variable declared in an inner function is accessible inside outer function.
+

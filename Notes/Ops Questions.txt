@@ -1,0 +1,9 @@
+Sam found some discrepancies in Git code and his manager want him to analyze who did that change. Which of the below command Sam should use to make this task easy?
+
+a. git-bisect
+
+b. git-blame
+
+c. git-apply
+
+d. git-verify-pack

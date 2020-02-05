@@ -1,0 +1,121 @@
+sessionFactory().withOptions().jdbcTimeZone(TimeZone.getTimeZone( "UTC" )).openSession();
+hibernate.globally_quoted_identifiers = true
+@Column(columnDefinition =
+        "AS CONCAT(" +
+        "    COALESCE(firstName, ''), " +
+        "    COALESCE(' ' + middleName1, ''), " +
+        "    COALESCE(' ' + middleName2, ''), " +
+  ")");
+@CreationTimestamp
+@UpdateTimestamp
+@Formula(value = "credit * rate")
+@Where( clause = "account_type = 'CREDIT'")
+@OneToMany(mappedBy = "client")
+@FilterDef
+@Filter
+@NaturalId
+- Batch Insertion / Updation
+@JoinColumn(name = "person_id",foreignKey = @ForeignKey(name = "PERSON_ID_FK"))
+@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true,cascade = CascadeType.ALL,PERSIST,MERGE,REMOVE)
+@NotFound ( action = NotFoundAction.IGNORE )
+@ElementCollection
+@CollectionTable(name="student", joinColumns=@JoinColumn(name="college_id"))
+@OrderColumn(name = "order_id")
+@OrderBy("number")
+@DiscriminatorValue
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE,InheritanceType.JOINED,TABLE_PER_CLASS)
+@Version
+@Immutable - When loading the entity and trying to change its state, Hibernate will skip any modification, therefore no SQL UPDATE statement is executed.
+Flushing
+Using ConnectionPools - IMP
+Using DataSources  - IMP
+Txn  - session.getTransaction().getStatus()
+Optimistic Locking, Pessimistic Locking
+@OptimisticLock( excluded = true )
+@DynamicUpdate
+@OptimisticLocking(type = OptimisticLockType.ALL)
+@SelectBeforeUpdate
+LockModeType.PESSIMISTIC_FORCE_INCREMENT
+createQuery().setLockOptions(new LockOptions(LockMode.PESSIMISTIC_WRITE))
+@ManyToOne(fetch = FetchType.EAGER) Eager,Lazy
+DynamicQuery
+hibernate.jdbc.batch_size
+flush()
+clear()
+ScrollableResults - scroll()
+HQL
+Caching
+ hibernate.cache.use_second_level_cache
+ hibernate.cache.use_query_cache
+ hibernate.cache.query_cache_factory
+ hibernate.cache.default_cache_concurrency_strategy
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+.setCacheable(true).setCacheRegion( "query.cache.person" ).setCacheMode( CacheMode.REFRESH )
+session.getSessionFactory().getCache().evictQueryRegion( "query.cache.person" );
+CriteriaAPI
+NativeSQL - createNativeQuery
+QueryDSL
+sessionFactory().withOptions().jdbcTimeZone(TimeZone.getTimeZone( "UTC" )).openSession();
+hibernate.globally_quoted_identifiers = true
+@Column(columnDefinition =
+        "AS CONCAT(" +
+        "    COALESCE(firstName, ''), " +
+        "    COALESCE(' ' + middleName1, ''), " +
+        "    COALESCE(' ' + middleName2, ''), " +
+  ")");
+@CreationTimestamp
+@UpdateTimestamp
+@Formula(value = "credit * rate")
+@Where( clause = "account_type = 'CREDIT'")
+@OneToMany(mappedBy = "client")
+@FilterDef
+@Filter
+@NaturalId
+- Batch Insertion / Updation
+@JoinColumn(name = "person_id",foreignKey = @ForeignKey(name = "PERSON_ID_FK"))
+@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true,cascade = CascadeType.ALL,PERSIST,MERGE,REMOVE)
+@NotFound ( action = NotFoundAction.IGNORE )
+@ElementCollection
+@CollectionTable(name="student", joinColumns=@JoinColumn(name="college_id"))
+@OrderColumn(name = "order_id")
+@OrderBy("number")
+@DiscriminatorValue
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE,InheritanceType.JOINED,TABLE_PER_CLASS)
+@Version
+@Immutable - When loading the entity and trying to change its state, Hibernate will skip any modification, therefore no SQL UPDATE statement is executed.
+Flushing
+Using ConnectionPools - IMP
+Using DataSources  - IMP
+Txn  - session.getTransaction().getStatus()
+Optimistic Locking, Pessimistic Locking
+@OptimisticLock( excluded = true )
+@DynamicUpdate
+@OptimisticLocking(type = OptimisticLockType.ALL)
+@SelectBeforeUpdate
+LockModeType.PESSIMISTIC_FORCE_INCREMENT
+createQuery().setLockOptions(new LockOptions(LockMode.PESSIMISTIC_WRITE))
+@ManyToOne(fetch = FetchType.EAGER) Eager,Lazy
+DynamicQuery
+hibernate.jdbc.batch_size
+flush()
+clear()
+ScrollableResults - scroll()
+HQL
+Caching
+ hibernate.cache.use_second_level_cache
+ hibernate.cache.use_query_cache
+ hibernate.cache.query_cache_factory
+ hibernate.cache.default_cache_concurrency_strategy
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
+.setCacheable(true).setCacheRegion( "query.cache.person" ).setCacheMode( CacheMode.REFRESH )
+session.getSessionFactory().getCache().evictQueryRegion( "query.cache.person" );
+CriteriaAPI
+NativeSQL - createNativeQuery
+QueryDSL
+
+
+@JsonManagedReference
+@JsonBackReference
+@JsonIgnore

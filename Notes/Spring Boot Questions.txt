@@ -1,0 +1,122 @@
+What is true about collection configuration elements?
+a#. This helps in wiring a list of values, allowing duplicates.
+
+b. This helps in wiring a list of values but without any duplicates.
+
+c. This can be used to inject a collection of name-value pairs where name and value can be of any type.
+
+d. This can be used to inject a collection of name-value pairs where the name and value are both Strings.
+
+How do you turn on annotation wiring?
+a. Add to bean configuration.
+
+b. Add to bean configuration.
+
+c. Add to bean configuration.
+
+d#. Add to bean configuration.
+
+What is the scope of stateful bean?
+a. session
+
+b. global-session
+
+c#. prototype
+
+d. request
+
+What BeanPostProcessor does?
+a. It processes beans once a bean is initialized.
+
+b. It defines callback methods that you can implement to provide your own instantiation logic, dependency-resolution logic etc.
+
+c. It processes beans once a bean is loaded.
+
+d. It processes beans once a bean exits.
+
+What is ContextStoppedEvent event?
+a. This event is published when the Servlet Context is either initialized or refreshed.
+
+b. This event is published when the ApplicationContext is stopped using the stop() method on the ConfigurableApplicationContext interface.
+
+c. This event is published when the HTTP Request is received.
+
+d. This event is published when the HTTP Response is returned.
+
+What is Target object?
+a. A represents a object in your application where you can plug-in AOP aspect.
+
+b. The object being advised by one or more aspects, this object will always be a proxy object, also referred to as the advised object.
+
+c. This is used to inject values in objects.
+
+d. This is not invoked during program execution by Spring AOP framework.
+
+Expression Language/ SpEL was introduced in which version of spring framework.
+
+a. 1.0
+
+b. 2.0
+
+c#. 3.0
+
+d. 4.0
+
+Which among these is not an applications server provided by Spring Boot?
+
+a. Embedded Tomcat
+
+b. Jetty
+
+c#. Binary Link
+
+d. Undertow
+
+Does Spring Boot in anyway reduce the need to write lots of configuration? yes
+
+Why is it possible to get started with minimum effort on Spring Boost?
+
+a. Because it has easy to use codes
+
+b. Because it is enabled by spring framework
+
+c. Because it has an opinionated view on spring platform
+
+d. Because it is well explained
+
+
+Which among these does Spring Boot not provide?
+
+a. Externalized configuration
+
+b. Equalizer
+
+c. Health checks
+
+d. Metrix
+
+The auto-configuration chooses what to create based on the availability of what?
+a. Fork
+
+b. Files
+
+c. Beans
+
+d. Information
+
+Does Spring Boot require XML Configuration to function? No
+
+Does Spring Boot favour Configuration over Convention ? No
+
+Which of these is not true of Spring Boot?
+
+a. No code generation
+
+b. No requirement of XML configuration
+
+c. No starter POMs
+
+d. No need for WAR files
+
+
+

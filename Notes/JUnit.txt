@@ -1,0 +1,33 @@
+@Test
+@Before
+@After
+@BeforeClass
+@AfterClass
+@Ignore
+import static org.junit.Assert.*;
+ - assertNotNull
+ - assertEquals
+ - assertSame
+ -fail
+ - etc
+BlockJunit4ClassRunner.class
+@Runwith(SpringJunit4ClassRunner.class)
+@Test(expected = IllegalArgumentException.class)
+junitvintage for BackSupport
+junitjupiter - 5
+
+Junit5
+ - @BeforeAll
+ - @BeforeEach
+ - Assertions.asset methods
+ - @AfterAll
+ - @AfterEach
+ - @Test
+ - Instead of expected. Assertion.assertThrows(exception,()->{greeting.greet(null);})
+ - junit-platform-runner,junit-jupiter-api dependencies for run configuration
+ - @Runwith(JUnitPlatform.class)
+ Mocking Involves in Stubbing, Setting Expectations and Verifying
+  - @Mock       - Stubbing
+  - when, thenReturn, thenThrow - Setting Expectation
+  - verify,matchers    - Verifying
+
